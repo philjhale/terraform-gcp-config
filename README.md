@@ -27,7 +27,7 @@ gcloud init
 Create a new project. There are multiple ways to do this:
 - Using `gcloud init` provides an option to create a project
 - Create using the [Cloud Console](https://console.cloud.google.com)
-- Run `gcloud projects create [your-project-name]
+- Run `gcloud projects create [your-project-name]`
 
 Set a variable so the project name can be used in the commands below.
 ```
