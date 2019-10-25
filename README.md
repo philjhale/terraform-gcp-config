@@ -27,7 +27,7 @@ gcloud init
 Create a new project. There are multiple ways to do this:
 - Using `gcloud init` provides an option to create a project
 - Create using the [Cloud Console](https://console.cloud.google.com)
-- Run `gcloud projects create [your-project-name]`
+- Run `gcloud projects create [your-project-id]` and switch to the new project `gcloud config set project [your-project-id]`
 
 Set a variable so the project name can be used in the commands below.
 ```
@@ -61,7 +61,7 @@ gsutil mb -b on -p $GOOGLE_PROJECT_ID gs://${GOOGLE_PROJECT_ID}_terraform
 
 Initialise Terraform.
 ```
-export GOOGLE_CLOUD_KEYFILE_JSON=./terraform-key.json
+export GOOGLE_APPLICATION_CREDENTIALS=./terraform-key.json
 terraform init -backend-config=bucket=${GOOGLE_PROJECT_ID}_terraform
 ```
 
